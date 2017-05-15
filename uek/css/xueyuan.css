@@ -1,0 +1,77 @@
+.xueyuannr{
+	padding: 0.1rem 0.24rem 0;
+}
+.xueyuanzl{
+	width: 100%;
+    background-color: #ffffff;
+    margin-top: 0.2rem;
+    padding: 0.1rem 0.24rem 0;
+    box-sizing:border-box;
+}
+.xueyuanzl ul{
+	margin-bottom: 0.1rem;
+	box-sizing:border-box;
+}
+.xueyuanzl ul li{
+	width: 100%;
+	height: 1.9rem;
+	margin-bottom: 0.1rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.35rem;
+	border-bottom: 1px solid #b8b8b8;
+	box-sizing:border-box;
+}
+.xueyuanzl ul li img{
+	display: block;
+	width: 1.97rem;
+	height: 1.33rem;
+	float: left;
+}
+.xueyuanzl ul li .xyxz{
+	width: 4.3rem;
+	float: left;
+	padding-left: 0.29rem;
+	padding-bottom: 0.18rem;
+	box-sizing:border-box;
+}
+.xyxztop{
+	/*width: 4.1rem;*/
+	overflow: hidden;
+}
+.xyxztop h2{
+	float: left;
+    font-size: 0.26rem;
+    font-weight: normal;
+    color: #000;
+}
+.xyxztop span{
+	float: left;
+	font-size: 0.18rem;
+    color: #444;
+    margin-top: 0.06rem;
+    margin-left: 0.1rem
+}
+.xian{
+	display: block;
+	margin-top: 0.08rem;
+	border-bottom: 1px dashed #b8b8b8;
+	width: 4.35rem;
+	margin-bottom: 0.08rem;
+}
+.sales{
+	width: 100%;
+	font-size: 0.24rem;
+    color: #94d43b;
+}
+.yema1{
+	height: 0.8rem;
+	margin-top: 0.2rem;
+}
+.yemaBox1{
+	padding-top: 0.15rem;
+	background: #fff;
+	box-sizing:border-box;
+}
+.yemaBox1 a{
+	margin-left: 0.61rem;
+}

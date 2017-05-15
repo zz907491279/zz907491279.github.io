@@ -46,7 +46,9 @@
                         });
                     }
                     if(index == 6){
-                        $('.zanzhu-con a').fadeIn(1000);
+//                        $('.lianxi').fadeIn(1000);
+                        $(".lianxi").animate({left:200});
+                        $(".pingjia").animate({right:200});
                     }
                 },
                 onLeave: function(index, direction){
@@ -71,7 +73,8 @@
                         });
                     }
                     if(index == 6){
-                        $('.zanzhu-con a').fadeOut(1000);
+                        $(".lianxi").animate({left:-300});
+                        $(".pingjia").animate({right:-300});
                     }
                 }
             });
@@ -144,21 +147,21 @@
     </div></div>
     <div class="section table" data-anchor="page4" style="height: 134px; background-color: rgb(233, 233, 233);"><div class="tableCell" style="height:134px;">
         <div class="social-inner inner">
-            <a class="so1" href="javascript:void(0)" rel="450,-175,450,51" style="left: 450px; top: -175px;">凡客</a>
-            <a class="so2" href="javascript:void(0)" rel="450,-175,450,110" style="left: 450px; top: -175px;">小米</a>
-            <a class="so3" href="javascript:void(0)" rel="450,-175,450,140" style="left: 450px; top: -175px;">京东</a>
-            <a class="so4" href="javascript:void(0)" rel="980,228,450,228" style="left: 980px; top: 228px;">麦香甜品</a>
-            <a class="so5" href="javascript:void(0)" rel="980,258,450,258" style="left: 980px; top: 258px;">苹果</a>
-            <a class="so6" href="javascript:void(0)" rel="980,288,450,288" style="left: 980px; top: 288px;">沙发网</a>
+            <a class="so1" href="fanke/index.html" rel="450,-175,450,51" style="left: 450px; top: -175px;">凡客</a>
+            <a class="so2" href="xiaomi/index.html" rel="450,-175,450,110" style="left: 450px; top: -175px;">小米</a>
+            <a class="so3" href="jindong/index.html" rel="450,-175,450,140" style="left: 450px; top: -175px;">京东</a>
+            <a class="so4" href="maixiang/index.html" rel="980,228,450,228" style="left: 980px; top: 228px;">麦香甜品</a>
+            <a class="so5" href="apple/index.html" rel="980,258,450,258" style="left: 980px; top: 258px;">苹果</a>
+            <a class="so6" href="shafa/index.html" rel="980,288,450,288" style="left: 980px; top: 288px;">沙发网</a>
             <!--<a class="so7" href="javascript:void(0)" rel="980,340,450,340" style="left: 980px; top: 340px;">沙发网</a>-->
-            <a class="so8" href="javascript:void(0)" rel="980,363,450,363" style="left: 980px; top: 363px;">银泰网</a>
-            <a class="so9" href="javascript:void(0)" rel="980,428,450,428" style="left: 980px; top: 428px;">移动端天猫</a>
-            <a class="so10" href="javascript:void(0)" rel="-405,369,162,369" style="left: -405px; top: 369px;">优逸客</a>
+            <a class="so8" href="yintai/index.html" rel="980,363,450,363" style="left: 980px; top: 363px;">银泰网</a>
+            <a class="so9" href="mobiletianmao/index.html" rel="980,428,450,428" style="left: 980px; top: 428px;">移动端天猫</a>
+            <a class="so10" href="uek/index.html" rel="-405,369,162,369" style="left: -405px; top: 369px;">优逸客</a>
             <!--<a class="so11" href="javascript:void(0)" rel="-405,434,162,434" style="left: -405px; top: 434px;">字母游戏</a>-->
             <!--<a class="so12" href="javascript:void(0)" rel="-405,464,162,464" style="left: -405px; top: 464px;">字母游戏</a>-->
-            <a class="so13" href="javascript:void(0)" rel="15,850,15,520" style="left: 15px; top: 850px;">移动网</a>
-            <a class="so14" href="javascript:void(0)" rel="376,1050,376,585" style="left: 376px; top: 1050px;">天猫</a>
-            <a class="so15" href="javascript:void(0)" rel="376,1050,357,612" style="left: 376px; top: 1050px;">字母游戏</a>
+            <a class="so13" href="mobile/index.html" rel="15,850,15,520" style="left: 15px; top: 850px;">移动网</a>
+            <a class="so14" href="tianmao/index.html" rel="376,1050,376,585" style="left: 376px; top: 1050px;">天猫</a>
+            <a class="so15" href="dazigame/typegame.html" rel="376,1050,357,612" style="left: 376px; top: 1050px;">字母游戏</a>
             <a class="soimg1" href="javascript:void(0)" rel="156,-175,156,10" style="left: 156px; top: -175px;"><img width="270" height="160" src="images/fk.png"></a>
             <a class="soimg2" href="javascript:void(0)" rel="-405,186,155,186" style="left: -405px; top: 186px;"><img width="270" height="165" src="images/apple.png"></a>
             <a class="soimg3" href="javascript:void(0)" rel="980,186,675,186" style="left: 980px; top: 186px;"><img width="277" height="166" src="images/sf.png"></a>
@@ -197,7 +200,14 @@
 
     <div class="section table" data-anchor="page6" style="height: 134px; background-image:url(images/contact.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom">
         <!--<div style="display: block;margin: 0 auto">邮箱地址:907491279@qq.com</div>-->
-        <div style="font-size: 30px;text-align: center;color:#ff7f8a;font-family: 'Apple Color Emoji'">邮箱地址:907491279@qq.com<br><span style="font-family: 'Apple Color Emoji';font-size: 12px;text-align:right">张阿姨</span></div>
+        <div style="position:absolute;top:200px;left:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'" class="lianxi">QQ:907491279<br>微信:柚子好像酸<br>邮箱地址:907491279@qq.com<br></div>
+        <div style="position:absolute;top:400px;right:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'" class="pingjia">
+            有责任，工作踏实，性格开朗乐观，积极上进。
+        <br>
+            易和人相处，拥有良好的亲和力。
+            <br>
+            具有很强的自学能力和良好的学习方法，喜欢研究各种新的框架。
+            <br></div>
     </div>
 </div></body>
 </html>

@@ -1,0 +1,331 @@
+header ul{
+	display: flex;
+}
+header ul li{
+	flex-grow:1;
+	/*background: red;*/
+	
+}
+header ul li a{
+	display: block;
+	font-size:0.32rem; 
+	color:#fff;
+	text-align: center;
+	line-height: 0.91rem;
+}
+.tea-content{
+	width: 100%;
+	background: #f5f6fa;
+	padding: 0.1rem 0.24rem 0;
+	box-sizing:border-box;
+}
+.mulu{
+	height: 0.63rem;
+}
+.mulu a{
+	color: #494747;
+    font-size: 0.22rem;
+    line-height: 0.7rem;
+    float: left;
+    margin: 0 0.14rem;
+    font-weight: bold;
+}
+.mulu a:last-child{
+	margin-right: 0;
+}
+.mulu span{
+	float: left;
+    width: 0.16rem;
+    height: 0.2rem;
+    margin-top: 0.26rem;
+    color: #494747;
+    background-size: 100%;
+    background: url(../img/jiantou.png) center center no-repeat;
+    overflow: hidden;
+}
+.floor1{
+	width:100%;
+	height: 2.31rem;
+	padding: 0.28rem;
+	margin-bottom: 0.1rem;
+	background: #fff;
+	box-sizing:border-box;
+}
+.floor1 ul{
+	display: flex;
+}
+.floor1 ul li{
+	flex-grow:1;
+	margin: 0 0.2rem;
+}
+.floor ul li img{
+	display: block;
+	
+}
+.floor1 ul li .mf{
+	font-size: 0.24rem;
+    color: #000000;
+    text-align: center;
+    /*margin-top:-20px;*/
+}
+.floor2{
+	width: 100%;
+    background-color: #fff;
+    margin-bottom: 0.1rem;
+    padding-left: 0.43rem;
+    padding-top: 0.3rem;
+    padding-right: 0.2rem;
+    padding-bottom: 0.3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.shu{
+	width: 0.08rem;
+    height: 0.24rem;
+    background-color: #01b5ff;
+    position: absolute;
+    left: 0.4rem;
+    top: 0.32rem;
+    display: inline-block;
+    float: left;
+    margin-left: -0.2rem;
+    margin-top: 0.07rem;
+    overflow: hidden; 
+}
+ h2{
+	font-size: 0.28rem;
+    color: #333;
+    margin-bottom: 0.13rem;
+}
+.line{
+	 width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #666666;
+}
+.floor2 p{
+	color: #333;
+    font-size: 0.24rem;
+    line-height: 0.38rem;
+    margin-top: 0.15rem;
+}
+/*.floor3{
+	padding:0.3rem 0.2rem 0.3rem 0.44rem;
+	box-sizing:border-box;
+	background: #fff;
+	overflow: hidden;
+}*/
+.static{
+	width: 100%;
+	height: 5.69rem;
+}
+h3{
+	margin-top: 0.22rem;
+}
+.staImg{
+	margin-top: 0.36rem;
+    height: 4rem;
+    background-size: cover;
+    width: 7rem;
+    margin-left: -0.4rem;
+}
+.post2{
+    margin-left: 2.04rem;
+}
+.neirong{
+    width: 100%;
+    height: 3.68rem;
+    font-size: 0.26rem;
+    position: relative;
+}
+.nertop{
+    height: 0.66rem;
+}
+.nertop p{
+    font-size: 0.3rem;
+    float: left;
+    height: 100%;
+    line-height: 0.66rem;
+    padding: 0 0.66rem;
+    font-weight: 600;
+    margin-top: 0.15rem;
+}
+.nerleft{
+   position: absolute;
+   left:-0.14rem;
+   right: 0;
+   /*background: red;*/
+   width: 0.4rem; 
+}
+.nerleft ul{
+    display: flex;
+   flex-direction:column;
+}
+.nerleft ul li{
+    flex-grow:1;
+    width: 0.14rem;
+    height: 0.14rem;
+    background: #01b5ff;
+    margin-top:0.34rem;
+    border:0.08rem solid #98e1ff;
+    border-radius: 50%;
+}
+.nerright{
+    margin-top: 0.1rem;
+    width: 100%;
+    height: 2.66rem;
+    border-left: 1px dashed #01b5ff;
+}
+.nerright ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+}
+.nerright ul li{
+    width: 100%;
+    flex-grow:1;
+}
+.nerright ul li p{
+    color:#000;
+   width: 1.6rem;
+   height: 0.66rem;
+   float: left;
+   margin-top: 0.05rem;
+   text-align: center;
+   font-size: 0.24rem;
+   line-height: 0.38rem;
+
+}
+.nerright ul li p:nth-child(2){
+    width: 1.8rem;
+     height: 0.66rem;
+    font-size: 0.26rem;
+    color: #ffa201;
+    font-weight: 600;
+    text-align: center;
+}
+.nerright ul li p:last-child{
+    width: 2.3rem;
+    height: 0.66rem;
+    color: #333;
+    font-size: 0.24rem;
+    margin-left: 0.3rem;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.kechenganpai{
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 0.1rem;
+    padding-left: 0.43rem;
+    padding-top: 0.3rem;
+    padding-right: 0.2rem;
+    padding-bottom: 0.3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.keneirong{
+    width: 100%;
+}
+.keneirong ul{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+}
+.keneirong ul li{
+    flex-grow:1;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.2rem;
+}
+.nritem1{
+    width: 3.1rem;
+    margin-right: 0.19rem;
+    border: 1px solid #f26378;
+    float: left;  
+}
+.nritem1-top{
+    padding-left:0.2rem;
+    width: 100%;
+    height: 0.61rem;
+    color: #fff;
+    font-size: 0.28rem;
+    line-height: 0.6rem;
+    background: #f26378;
+    box-sizing:border-box;
+}
+.nritem1-bottom{
+    color: #000;
+    font-size: 0.24rem;
+    line-height: 0.38rem;
+    padding: 0.2rem;
+    margin-top: -0.05rem;
+    /*在适当的时候换行 允许在单词内换行*/
+    word-break: break-all;
+}
+.nritem1.nritem2{
+    margin-right: 0;
+    border:1px solid #1bbf9a;
+    float: right;
+}
+.nritem1-top.top2{
+    background: #1bbf9a;
+}
+.nritem1-bottom.bottom2{
+    padding: 0.2rem 0.2rem 0.59rem;
+    box-sizing:border-box;
+}
+.nritem3{
+        
+    border: 1px solid #f77843;
+}
+.nritem3-top{
+    width: 100%;
+    height: 0.6rem;
+    padding-left: 0.2rem;
+    color: #fff;
+    font-size: 0.28rem;
+    line-height: 0.6rem;
+    background-size: 100%;
+    background: #f77843;
+     box-sizing:border-box;
+}
+.nritem3-bottom{
+    width: 100%;
+    padding: 0.2rem;
+    color:#333;
+    font-size: 0.24rem;
+    line-height: 0.38rem; 
+    word-break: break-all;
+    box-sizing:border-box;
+}
+.baoming{
+    width: 1.73rem;
+    height: 1.73rem;
+    margin: 0.3rem 2.7rem 0;
+    margin-bottom: -1.5rem;
+}
+.baoming a{
+    display: block;
+}
+.baoming a img{
+    display: block;
+    width: 100%;
+}
+.banquan{
+    width: 100%;
+    height: 1.2rem;
+    font-size: 0.3rem;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+}
+.banquan p{
+
+    color: #666;
+    font-size: 0.2rem;
+    text-align: center;
+    padding-top: 0.18rem;
+    box-sizing: border-box;
+}

@@ -1,0 +1,435 @@
+header{
+	width: 100%;
+	height: 0.91rem;
+	background:#007be3;
+	top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+.hdbox{
+	width: 2.32rem;
+	height: 0.7rem;
+	padding-top: 0.16rem;
+	margin: 0 auto;
+}
+.hdbox a.logo{
+	float: left;
+	width: 0.71rem;
+	height: 0.68rem;
+	background: url(../img/logo.png) no-repeat;
+	background-position: center center;
+	background-size: 0.71rem;
+}
+.hdbox h3{
+	font-size: 0.37rem;
+    color: #fff;
+    line-height: 0.69rem;
+    float: left;
+    margin-left: 0.16rem;
+}
+.banner{
+	width: 100%;
+	height: 4.31rem;
+	position: relative;
+}
+.banner img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.lunbo{
+	width: 100%;
+	height: 0.224rem;
+	position: absolute;
+	left: 0;
+	bottom: -0.2rem;
+	/*background: red;*/
+}
+.lunbo span{
+	display: block;
+	width: 24.99%;
+	height: 4px;
+	background: #000;
+	opacity:0.2;
+	float: left;
+}
+.lunbo em{
+	list-style: none;
+	display: block;
+	width: 24.99%;
+	height: 4px;
+	background: #ff8d12;
+	float: left;
+}
+.floor1 ul li img{
+	display: block;
+	width: 1.24rem;
+	height: 1.24rem;
+}
+.content{
+	height: 4.9559rem;
+	background: #f5f6fa;
+	padding: 0.28rem 0.2rem 0;
+    overflow: hidden;
+}
+.content ul{
+	height: 2.4rem;
+	display: flex;
+	overflow: hidden;
+	justify-content：space-between; 
+}
+.content ul li{
+	flex-grow:1;
+	/*width: 1.58rem;
+	height: 2rem;*/
+	margin-right: 0.3rem;
+	margin-bottom: 0.32rem;
+	text-align: center;
+    font-size: 0.24rem;
+    color: #000;
+   
+   
+}
+.content ul .clear{
+	margin-right: 0;
+}
+.content ul li a{
+	/*display: block;
+	margin-left: 0.25rem;
+	margin-top: 0.25rem;*/
+	display: block;
+    width: 100%;
+    height: 1.59rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    margin-bottom: 0.16rem;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+	
+
+}
+.content ul li a .contImg{
+	display: block;
+	width: 1.07rem;
+	height: 1.07rem;
+	background: url(../img/shouye6.png) no-repeat;
+	background-position: 0 0;
+	background-size: 2.07rem auto;
+/*	margin: 0.1rem 0.1rem;*/
+}
+.content ul li a .img1{
+	background-position: -1.01rem 0;
+}
+.content ul li a .img2{
+	background-position: 0.14rem -1.11rem;
+}
+.content ul li a .img3{
+	background: url(../img/ufo.png) no-repeat;
+	background-position: center center;
+	background-size: 1.07rem auto;
+}
+.content ul li a .img4{
+	background-position: -0.98rem -1.1rem;
+	background-size: 2rem;
+}
+.content ul li a .img5{
+	background-position: 0.08rem -3.3rem;
+	background-size: 2rem;
+}
+.content ul li a .img6{
+	background-position: 0.1rem -2.2rem;
+	background-size: 2rem;
+}
+.content ul li a .img7{
+	background-position: -0.98rem -2.2rem;
+	background-size: 2rem;
+}
+.servce{
+	width:100%;
+	background: #fff;
+
+}
+.title{
+	width: 100%;
+    height: 0.64rem;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 0.65rem;
+    font-size: 0.24rem;
+    color: #1378ba;
+}
+.servce ul{
+	height: 2.23rem;
+	border-bottom: 1px solid #e8e8e8;
+}
+.servce ul li{
+	width: 50%;
+	height: 2.23rem;
+	/*background: red;*/
+	border-right: 1px solid #e8e8e8;
+    padding: 0.38rem 0rem 0.48rem 0.16rem;
+    box-sizing: border-box;
+    float: left;
+    
+}
+.servce ul li a{
+	display: block;
+}
+.servce ul li .left{
+	width: 1.84rem;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+.servce ul li .left h2{
+	font-size: 0.25rem;
+    font-weight: normal;
+    color: #000000;
+}
+.servce ul li .left h3{
+	font-size: 0.20rem;
+    font-weight: normal;
+    color: #999;
+}
+.servce ul li .right{
+    width: 1.53rem;
+    height: 1.35rem;
+    float: left;
+    background: #fff url(../img/shouye6.png) 0 -4.4rem no-repeat;
+    background-size: 2rem;
+}
+.servce ul li .right1{
+	    background: #fff url(../img/shouye6.png) 0 -5.9rem no-repeat;
+	    background-size: 2rem;
+}
+.servce .col-2{
+	width: 100%;
+	height: 1.42rem;
+	/*background: red;*/
+	margin-bottom: 3.5rem;
+
+}
+.servce .col-2 .mfst{
+	width: 33.333333%;
+	height: 100%;
+	border-right: 1px solid #e8e8e8;
+	box-sizing:border-box;
+	 padding: 0.4rem 0 0.38rem 0.2rem;
+	float: left;
+}
+.col-2 .mfst .left{
+	width: 0.6rem;
+    height: 100%;
+    float: left;
+	background: url(../img/mfst.png) no-repeat;
+	background-position: center center;
+	background-size:cover;
+}
+.col-2 .mfst .left1{
+	background: url(../img/dongtai.png) no-repeat;
+}
+.col-2 .mfst .left2{
+	background: url(../img/shili.png) no-repeat;
+}
+.col-2 .mfst .right{
+	width: 1.53rem;
+	margin-left: 0.1rem;
+	float: left;
+}
+.col-2 .mfst .right h2{
+	font-size: 0.25rem;
+    font-weight: normal;
+    color: #000000;
+}
+.col-2 .mfst .right h3{
+	font-size: 0.20rem;
+    font-weight: normal;
+    color: #999;}
+
+.contact{
+	height: 0.92rem;
+	width: 100%;
+	margin-top: 0.2rem;
+	background-color:#e7e7e7;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+
+}
+.contact a{
+	display: block;
+	width: 30%;
+	height: 0.81rem;
+	float: left;
+}
+.cmfst{
+	width: 100%;
+	height: 100%;
+	font-size: 0.22rem;
+    color: #000;
+    text-align: left;
+    line-height: 0.81rem;
+}
+.contact a .cmfst i{
+	display: block;
+	width: 0.32rem;
+    height: 0.32rem;
+    float: left;
+    line-height: 0.81rem;
+    margin-top: 0.28rem;
+    margin-left: 0.27rem; 
+	background: url(../img/qq.png) no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.contact a .cmfst span{
+	display: block;
+	float: left;
+	color: #000;
+	font-size: 0.24rem;
+	margin-left: 0.1rem;
+	line-height: 0.92rem;
+}
+.contact .phone{
+	width: 40%;
+	/*margin-bottom: -0.1rem;*/
+}
+.contact a .mfbd{
+	width: 100%;
+	float: left;
+	background-color: #ff8d12;
+    border-radius: 0.08rem;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 0.15rem #ff8d12;
+	margin-top: -0.1rem;
+}
+.contact a .mfbd i{
+	float: left;
+	width: 0.36rem;
+    height: 0.36rem;
+    background: url(../img/shouye6.png) -1.6rem -4.78rem no-repeat;
+    background-size: 2rem;
+    display: inline-block;
+    line-height: 0.9rem;
+    margin-left: 0.7rem;
+    margin-top: 0.21rem;
+}
+.contact a .mfbd span{
+	display: block;
+	float: left;
+    font-size: 0.3rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 0.9rem;
+    margin-left: 0.1rem;
+}
+.contact a .zaixian{
+	width: 100%;
+	height: 100%;
+	font-size: 0.22rem;
+    color: #000;
+    text-align: left;
+    line-height: 0.92rem;
+}
+.contact a .zaixian i{
+	display: block;
+	width: 0.36rem;
+    height: 0.36rem;
+    float: left;
+    line-height: 0.81rem;
+    margin-top: 0.28rem;
+    margin-left: 0.43rem; 
+    /*margin-right: 0.1rem;*/
+	    background: url(../img/shouye6.png) -1.6rem -5.3rem no-repeat;
+
+	    background-size: 2rem;
+}
+.contact a .zaixian span{
+	display: block;
+    float: left;
+    color: #000;
+    font-size: 0.24rem;
+    margin-left: 0.1rem;
+    line-height: 0.92rem;
+}
+.yema{
+	width: 100%;
+	margin-top: 0.2rem;
+}
+.yemaBox{
+	padding-top:0.15rem;
+	height: 0.8rem;
+}
+.yemaBox a{
+	display: block;
+	width: 0.51rem;
+	height: 0.51rem;
+	background: url(../img/s1.png) no-repeat;
+	background-position: 0 0;
+	background-size:100%;
+	float: left;
+    padding: 0.1rem;
+    border-radius: 0.4rem;
+    margin-right: 0.15rem;
+    margin-left: 0.28rem;
+    box-sizing:border-box;
+
+}
+.yemaBox a:nth-child(2){
+	display: block;
+	background: url(../img/s2.png) no-repeat;
+	background-position: 0 0;
+	background-size:100%;
+	width: 1.51rem;
+	margin-right: 0.15rem;
+	padding: 0.1rem;
+	box-sizing:border-box;
+	margin-left: 0;
+}
+.yemaBox a:nth-child(3){
+	border: 1px solid #666;
+    letter-spacing: 1px;
+    color: #666;
+    width: 1.4rem;
+    border-radius: 0.4rem;
+    color:#666;
+    float: left;
+    padding: 0.1rem;
+    height: 0.5rem;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.3rem;
+    margin-right: 0.15rem;
+    margin-left: 0;
+    background-image: none;
+}
+.yemaBox a:nth-child(4){
+	display: block;
+	background: url(../img/s3.png) no-repeat;
+	background-position: 0 0;
+	background-size:100%;
+	width: 1.51rem;
+	margin-right: 0.15rem;
+	padding: 0.1rem;
+	box-sizing:border-box;
+	margin-left: 0;
+}
+.yemaBox a:nth-child(5){
+	display: block;
+	width: 0.51rem;
+	height: 0.51rem;
+	background: url(../img/s4.png) no-repeat;
+	background-position: 0 0;
+	background-size:100%;
+	float: left;
+    padding: 0.1rem;
+    border-radius: 0.4rem;
+    margin-right: 0;
+    margin-left: 0;
+    box-sizing:border-box;
+}

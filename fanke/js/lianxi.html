@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lianxi</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.banner{
+		width: 100%;
+		height: 500px;
+		background: pink;
+		margin: 50px auto;
+	}
+	.bannerBox{
+		width: 800px;
+		height: 500px;
+		border: 1px solid #000;
+		margin: 0 auto;
+		position: relative;
+	}
+	.img{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+	.img li{
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 1;
+	}
+	.img .tu:nth-child(1){
+		background: red;
+	}
+	.img .tu:nth-child(2){
+		background: blue;
+	}
+	.img .tu:nth-child(3){
+		background: green;
+	}
+	.lunbo{
+		position: absolute;
+		width: 100px;
+		height: 10px;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 10;
+	}
+	.lunbo li{
+		float: left;
+		width: 30px;
+		height: 10px;
+		background-color:orange;
+		margin-right: 5px;
+	}
+	.lunbo li:last-child{
+		margin-right: 0;
+	}
+	.leftbtn{
+		position: absolute;
+		top:0;
+		bottom: 0;
+		margin: auto;
+		width: 30px;
+		height: 100px;
+		background:black;
+		z-index: 10;
+		cursor:pointer;
+	}
+	.rightbtn{
+		position: absolute;
+		right: 0;
+		top:0;
+		bottom: 0;
+		margin: auto;
+		width: 30px;
+		height: 100px;
+		background:black;
+		z-index: 10;
+		cursor:pointer;
+	}
+</style>
+<body>
+	<script src="function.js"></script>
+	<script src="index.js"></script>
+	<div class="banner">
+		<div class="bannerBox">
+			<ul class="img">
+				<li class="tu"></li>
+				<li class="tu"></li>
+				<li class="tu"></li>
+			</ul>
+			<div class="lunbo">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="leftbtn"></div>
+			<div class="rightbtn"></div>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			const bannerBox=$(".bannerBox")[0];
+			const img=$(".img")[0];
+			const tu=$(".tu");
+			// const imgw=parseInt(window.getComputedStyle(img,null).width);
+			const imgw=parseInt(window.getComputedStyle(img,null).width);
+			const lis=$(".lunbo li");
+			const leftbtn=$(".leftbtn");
+			const rightbtn=$(".rightbtn");
+			tu[0].style.zIndex=2;
+			tu[0].style.opacity=1;
+
+			lis[0].style.background="#fff";
+			for(let i=0;i<tu.length;i++){
+				tu[i].style.left=imgw+"px";
+			}
+			tu[0].style.left=0;
+			var t=setInterval(move,1000);
+			var now=0;
+			var next=0;
+			function move(type="l"){
+				if(type=="l"){
+					next++;
+					if(next>tu.length-1){
+						next=0;
+					}
+					tu[next].style.left=imgw+"px";
+					animate(tu[now],{left:-imgw},500);
+				}
+				
+			}
+		})
+	</script>
+</body>
+</html>

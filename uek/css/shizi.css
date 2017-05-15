@@ -1,0 +1,156 @@
+body{
+	background: #f5f6fa;
+
+}
+header ul li{
+	position: relative;
+}
+header ul li a span{
+	display: block;
+	width: 100%;
+	height: 0.06rem;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.muluarea{
+	width: 100%;
+    padding: 0.1rem 0.24rem 0;
+    box-sizing: border-box;
+    }
+.nerrongarea{
+	width: 100%;
+	padding:0.1rem 0.24rem 0;
+	margin-top:0.2rem;
+	background: #fff;
+	box-sizing: border-box;
+}
+.tab{
+	width: 100%;
+    height: 0.8rem;
+    border: 1px solid #01b5ff;
+    border-radius: 0.07rem;
+    box-sizing: border-box;
+    margin-bottom: 0.2rem;
+
+}
+.tab a{
+	display: block;
+	width: 33.333333%;
+	background: #01b5ff;
+	color:#fff;
+	border-radius: 0.07rem;
+	float: left;
+	text-align: center;
+	font-size: 0.28rem;
+	line-height: 0.8rem;
+	 position: relative;
+}
+.sanjiao{
+	position: absolute;
+    width: 0rem;
+    height: 0rem;
+    border: 0.2rem solid;
+    border-top-color: #01b5ff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    top: 0.74rem;
+    left: 50%;
+    margin-left: -0.1rem;
+    /*display: none;*/
+}
+.tab a:nth-child(2){
+	background: transparent;
+	color: #333;
+}
+.tab a:last-child{
+	background: transparent;
+	color: #333;
+}
+.tabcontent{
+	width: 100%;
+}
+.tabcontent ul li{
+	width: 100%;
+	padding: 0.2rem;
+	border-bottom: 1px solid #b8b8b8;
+	overflow: hidden;
+	box-sizing:border-box;
+
+}
+.tabcontent ul li a{
+	display: block;
+}
+.tabcontent ul li a img{
+	display: block;
+	margin-top: 0.15rem;
+	height: 2.35rem;
+	width: 2.35rem;
+	float: left;
+}
+.tabcontent ul li a .ziliao{
+	width: 3.68rem;
+	margin-top: 0.34rem;
+	float: right;
+	overflow: hidden;
+}
+.part1{
+	width: 100%;
+	text-align: left;
+	white-space: nowrap;
+    text-overflow: ellipsis;  
+}
+.part1 p{
+	font-size: 0.26rem;
+    color: #111;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.part1 span{
+	display: block;
+	border-bottom: 1px dashed #b8b8b8;
+    width: 3.6rem;
+    height: 0;
+    margin: 0.2rem 0;
+}
+.part1 p:last-child{
+	font-size: 0.24rem;
+    color: #01b5ff;
+    width: 100%;
+    height: 0.26rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 0.24rem;
+    margin-left: 0;
+}
+.part2{
+	margin-top: 0.2rem;
+	width: 3.03rem;
+    height: 0.3rem;
+    color: #666666;
+    font-size: 0.24rem;
+    line-height: 0.3rem;
+    text-align: left;
+    background-color: #fff;
+    margin-left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.part3{
+	width: 1.5rem;
+    text-align: left;
+    line-height: 0.45rem;
+    background-color: #fff;
+    margin: 0.1rem 0;
+	color: #ff9300;
+    height: 0.24rem;
+    font-size: 0.24rem;
+}

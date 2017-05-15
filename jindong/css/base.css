@@ -1,0 +1,26 @@
+h1,h2,h3,h4,h5,h6,p,ul,dl,dt,dd,form,input,textarea,pre,figure,body,img{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border:0;
+}
+i,u,del,b{
+	font-style: normal;
+	text-decoration: none;
+	font-weight: normal;
+}
+body{
+	
+	font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+   	color: #666;
+		/*color:#333;*/
+		
+	overflow-x:hidden;
+	background-color: #f6f6f6;
+
+}
