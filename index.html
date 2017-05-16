@@ -21,12 +21,23 @@
             font-size: 18px;
             font-family: 微软雅黑;
             color:#fa8977;
+            cursor: pointer;
+        }
+        .pingjia{
+            width:320px;
+            height: 305px;
+            background-image: url("images/paopao2.png");
+            background-size: cover;
+            position: absolute;
+            right:200px;
+            top:80px;
+            cursor: pointer;
         }
     </style>
     <script>
         $(document).ready(function () {
             $.fn.fullpage({
-                slidesColor: ['#0075D1', '#fbe9e9', '#FDF6E1', '#E9E9E9', '#F3F3F3', '#F9F3DC'],
+                slidesColor: ['#fad0d1', '#fbe9e9', '#FDF6E1', '#E9E9E9', '#F3F3F3', '#F9F3DC'],
                 anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
                 menu: '#menu',
                 afterRender: function () {
@@ -99,7 +110,7 @@
 //                $(".lianxi").transition({scale: 1});
 //            })
             $(".pingjia").hover(function () {
-                $(".pingjia").transition({scale: 2});
+                $(".pingjia").transition({scale: 1.1});
             }, function () {
                 $(".pingjia").transition({scale: 1});
             })
@@ -307,13 +318,17 @@
         </ul>
         <!--<div style="position:absolute;top:400px;right:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"-->
              <!--class='pingjia'>-->
-            <!--有责任，工作踏实，性格开朗乐观，积极上进。-->
+
+        <!--</div>-->
+        <div class="pingjia">
+            <div class="kuai"></div>
+            <!--你的能力超乎你的想象-->
             <!--<br>-->
             <!--易和人相处，拥有良好的亲和力。-->
             <!--<br>-->
             <!--具有很强的自学能力和良好的学习方法，喜欢研究各种新的框架。-->
             <!--<br>-->
-        <!--</div>-->
+        </div>
     </div>
 </div>
 </body>

@@ -25,7 +25,7 @@
 .screen-main .slogen { width: 363px; height: 45px; left: 1462px; z-index: 1; top: -106px; background: url(../images/slogen_5635c9f.png) }
 
 .science-inner a { text-decoration: none; color: #9c7871; float: left; position: absolute; display: inline-block; white-space: nowrap }
-.science-inner a:hover { color: #1c9cff }
+.science-inner a:hover { color: #FFB4BC }
 .science-inner .stiteml { padding-left: 37px; background: url(../images/num-keji_3f60772.png) 0 0 no-repeat }
 .science-inner .stitemr { padding-right: 37px; background: url(../images/num-keji_3f60772.png) 0 0 no-repeat }
 .science-inner .st1 { background-position: 0 4px }
