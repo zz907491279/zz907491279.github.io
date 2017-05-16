@@ -10,6 +10,19 @@
     <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/jquery.transit.js"></script>
     <script src="js/echarts.common.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .lianxi li{
+            line-height: 80px;
+            font-size: 18px;
+            font-family: 微软雅黑;
+            color:#fa8977;
+        }
+    </style>
     <script>
         $(document).ready(function () {
             $.fn.fullpage({
@@ -80,11 +93,11 @@
                     }
                 }
             });
-            $(".lianxi").hover(function () {
-                $(".lianxi").transition({scale: 2});
-            }, function () {
-                $(".lianxi").transition({scale: 1});
-            })
+//            $(".lianxi .one").hover(function () {
+//                $(".lianxi").transition({scale: 2});
+//            }, function () {
+//                $(".lianxi").transition({scale: 1});
+//            })
             $(".pingjia").hover(function () {
                 $(".pingjia").transition({scale: 2});
             }, function () {
@@ -94,67 +107,7 @@
             var bingtu=$(".box")[0];
             var myChart = echarts.init(bingtu);
             var option = {
-//                title : {
-//                    text: 'MySkills',
-//                    x:'center'
-//                },
-//                tooltip : {
-//                    trigger: 'item',
-//                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-//                },
-//                legend: {
-//                    x : 'center',
-//                    y : 'bottom',
-//                    data:['rose1','rose2','rose3','rose4','rose5','rose6','rose7','rose8']
-//                },
-//                toolbox: {
-//                    show : true,
-//                    feature : {
-//                        mark : {show: true},
-//                        dataView : {show: true, readOnly: false},
-//                        magicType : {
-//                            show: true,
-//                            type: ['pie', 'funnel']
-//                        },
-//                        restore : {show: true},
-//                        saveAsImage : {show: true}
-//                    }
-//                },
-//                calculable : true,
                 series : [
-//                    {
-//                        name:'半径模式',
-//                        type:'pie',
-//                        radius : [20, 110],
-//                        center : ['25%', '50%'],
-//                        roseType : 'radius',
-//                        label: {
-//                            normal: {
-//                                show: false
-//                            },
-//                            emphasis: {
-//                                show: true
-//                            }
-//                        },
-//                        lableLine: {
-//                            normal: {
-//                                show: false
-//                            },
-//                            emphasis: {
-//                                show: true
-//                            }
-//                        },
-//                        data:[
-//                            {value:10, name:'rose1'},
-//                            {value:5, name:'rose2'},
-//                            {value:15, name:'rose3'},
-//                            {value:25, name:'rose4'},
-//                            {value:20, name:'rose5'},
-//                            {value:35, name:'rose6'},
-//                            {value:30, name:'rose7'},
-//                            {value:40, name:'rose8'}
-//                        ]
-//                    },
                     {
                         name:'面积模式',
                         type:'pie',
@@ -342,18 +295,25 @@
     </div>
 
     <div class="section table" data-anchor="page6"
-         style="height: 134px; background-image:url(images/contact.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom">
+         style="height: 134px; background-image:url(images/mm.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom">
         <!--<div style="display: block;margin: 0 auto">邮箱地址:907491279@qq.com</div>-->
-        <div style="position:absolute;top:200px;left:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"
-             class="lianxi">QQ:907491279<br>微信:柚子好像酸<br>邮箱地址:907491279@qq.com<br></div>
-        <div style="position:absolute;top:400px;right:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"
-             class='pingjia'>
-            有责任，工作踏实，性格开朗乐观，积极上进。
-            <br>
-            易和人相处，拥有良好的亲和力。
-            <br>
-            具有很强的自学能力和良好的学习方法，喜欢研究各种新的框架。
-            <br></div>
+        <ul style="position:absolute;top:200px;left:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"
+             class="lianxi">
+                <li style="width: 400px;height: 80px;background-image: url(images/one.png);margin-bottom: 10px">QQ:907491279</li>
+                <li style="width: 400px;height: 80px;background-image: url(images/two.png);margin-bottom: 10px">微信:z907491279</li>
+                <li style="width: 400px;height: 80px;background-image: url(images/three.png);margin-bottom: 10px">邮箱:907491279@qq.com</li>
+                <li></li>
+                <li></li>
+        </ul>
+        <!--<div style="position:absolute;top:400px;right:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"-->
+             <!--class='pingjia'>-->
+            <!--有责任，工作踏实，性格开朗乐观，积极上进。-->
+            <!--<br>-->
+            <!--易和人相处，拥有良好的亲和力。-->
+            <!--<br>-->
+            <!--具有很强的自学能力和良好的学习方法，喜欢研究各种新的框架。-->
+            <!--<br>-->
+        <!--</div>-->
     </div>
 </div>
 </body>
