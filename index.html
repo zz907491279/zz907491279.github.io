@@ -8,14 +8,16 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/echarts.common.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $.fn.fullpage({
                 slidesColor: ['#0075D1', '#fbe9e9', '#FDF6E1', '#E9E9E9', '#F3F3F3', '#F9F3DC'],
                 anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
                 menu: '#menu',
-                afterRender: function(){
-                    $('.inner a').each(function(){
+                afterRender: function () {
+                    $('.inner a').each(function () {
                         var $rel = $(this).attr('rel');
                         var $arr = $rel.split(',');
                         $(this).animate({
@@ -24,9 +26,9 @@
                         }, 500);
                     });
                 },
-                afterLoad: function(anchorLink, index){
-                    if(index == 1){
-                        $('.screen-main span').each(function(){
+                afterLoad: function (anchorLink, index) {
+                    if (index == 1) {
+                        $('.screen-main span').each(function () {
                             var $rel = $(this).attr('rel');
                             var $arr = $rel.split(',');
                             $(this).animate({
@@ -35,8 +37,8 @@
                             }, 500);
                         });
                     }
-                    if(index == 2 || index == 3 || index == 4 || index == 5){
-                        $('.inner').eq(index - 2).find('a').each(function(){
+                    if (index == 2 || index == 3 || index == 4 || index == 5) {
+                        $('.inner').eq(index - 2).find('a').each(function () {
                             var $rel = $(this).attr('rel');
                             var $arr = $rel.split(',');
                             $(this).animate({
@@ -45,15 +47,15 @@
                             }, 500);
                         });
                     }
-                    if(index == 6){
+                    if (index == 6) {
 //                        $('.lianxi').fadeIn(1000);
-                        $(".lianxi").animate({left:200});
-                        $(".pingjia").animate({right:200});
+                        $(".lianxi").animate({left: 200});
+                        $(".pingjia").animate({right: 200});
                     }
                 },
-                onLeave: function(index, direction){
-                    if(index == 1){
-                        $('.screen-main span').each(function(){
+                onLeave: function (index, direction) {
+                    if (index == 1) {
+                        $('.screen-main span').each(function () {
                             var $rel = $(this).attr('rel');
                             var $arr = $rel.split(',');
                             $(this).animate({
@@ -62,8 +64,8 @@
                             }, 500);
                         });
                     }
-                    if(index == 2 || index == 3 || index == 4 || index == 5){
-                        $('.inner').eq(index - 2).find('a').each(function(){
+                    if (index == 2 || index == 3 || index == 4 || index == 5) {
+                        $('.inner').eq(index - 2).find('a').each(function () {
                             var $rel = $(this).attr('rel');
                             var $arr = $rel.split(',');
                             $(this).animate({
@@ -72,16 +74,113 @@
                             }, 500);
                         });
                     }
-                    if(index == 6){
-                        $(".lianxi").animate({left:-300});
-                        $(".pingjia").animate({right:-300});
+                    if (index == 6) {
+                        $(".lianxi").animate({left: -300});
+                        $(".pingjia").animate({right: -300});
                     }
                 }
             });
+            $(".lianxi").hover(function () {
+                $(".lianxi").transition({scale: 2});
+            }, function () {
+                $(".lianxi").transition({scale: 1});
+            })
+            $(".pingjia").hover(function () {
+                $(".pingjia").transition({scale: 2});
+            }, function () {
+                $(".pingjia").transition({scale: 1});
+            })
+//            饼图
+            var bingtu=$(".box")[0];
+            var myChart = echarts.init(bingtu);
+            var option = {
+//                title : {
+//                    text: 'MySkills',
+//                    x:'center'
+//                },
+//                tooltip : {
+//                    trigger: 'item',
+//                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+//                },
+//                legend: {
+//                    x : 'center',
+//                    y : 'bottom',
+//                    data:['rose1','rose2','rose3','rose4','rose5','rose6','rose7','rose8']
+//                },
+//                toolbox: {
+//                    show : true,
+//                    feature : {
+//                        mark : {show: true},
+//                        dataView : {show: true, readOnly: false},
+//                        magicType : {
+//                            show: true,
+//                            type: ['pie', 'funnel']
+//                        },
+//                        restore : {show: true},
+//                        saveAsImage : {show: true}
+//                    }
+//                },
+//                calculable : true,
+                series : [
+//                    {
+//                        name:'半径模式',
+//                        type:'pie',
+//                        radius : [20, 110],
+//                        center : ['25%', '50%'],
+//                        roseType : 'radius',
+//                        label: {
+//                            normal: {
+//                                show: false
+//                            },
+//                            emphasis: {
+//                                show: true
+//                            }
+//                        },
+//                        lableLine: {
+//                            normal: {
+//                                show: false
+//                            },
+//                            emphasis: {
+//                                show: true
+//                            }
+//                        },
+//                        data:[
+//                            {value:10, name:'rose1'},
+//                            {value:5, name:'rose2'},
+//                            {value:15, name:'rose3'},
+//                            {value:25, name:'rose4'},
+//                            {value:20, name:'rose5'},
+//                            {value:35, name:'rose6'},
+//                            {value:30, name:'rose7'},
+//                            {value:40, name:'rose8'}
+//                        ]
+//                    },
+                    {
+                        name:'面积模式',
+                        type:'pie',
+                        radius : [30, 110],
+                        center : ['75%', '50%'],
+                        roseType : 'area',
+                        data:[
+                            {value:10, name:'Angularjs'},
+                            {value:5, name:'Ajax'},
+                            {value:15, name:'mysql'},
+                            {value:25, name:'php'},
+                            {value:20, name:'jQuery'},
+                            {value:35, name:'js'},
+                            {value:30, name:'html5'},
+                            {value:40, name:'css'}
+                        ]
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
         });
     </script>
 </head>
-<body style="overflow: hidden; height: 100%;"><div id="superContainer" style="top: 0px;">
+<body style="overflow: hidden; height: 100%;">
+<div id="superContainer" style="top: 0px;">
 
     <ul id="menu">
         <li data-menuanchor="page1" class="active"><a href="#page1">TOP</a></li>
@@ -92,122 +191,170 @@
         <li data-menuanchor="page6"><a href="#page6">Contact me</a></li>
     </ul>
 
-    <div class="section section1 active table" data-anchor="page1" style="height: 134px; background-image: url(images/3.jpg); background-size: cover">
-        <div style="font-size: 30px;text-align: center;color:#fbac69;font-family: 'Apple Color Emoji'">欢迎来到我的主页<br><span style="font-family: 'Apple Color Emoji';font-size: 12px;text-align:right">张阿姨</span></div>
+    <div class="section section1 active table" data-anchor="page1"
+         style="height: 134px; background-image: url(images/3.jpg); background-size: cover">
+        <div style="font-size: 30px;text-align: center;color:#fbac69;font-family: 'Apple Color Emoji'">欢迎来到我的主页<br><span
+                style="font-family: 'Apple Color Emoji';font-size: 12px;text-align:right">张阿姨</span></div>
     </div>
 
-    <div class="section table" data-anchor="page2" style="height: 134px; background-image: url(images/aboutme.jpg);background-size: contain;background-position: bottom center;background-repeat: no-repeat"><div class="tableCell" style="height:134px;">
-        <div class="science-inner inner">
-            <a class="st1" href="javascript:void(0)" rel="0,-350,0,7" style="left: 0px; top: -350px;">榴莲冰淇淋</a>
-            <a class="st2" href="javascript:void(0)" rel="0,-350,0,37" style="left: 0px; top: -350px;">咖喱火锅</a>
-            <a class="st3" href="javascript:void(0)" rel="0,-350,0,68" style="left: 0px; top: -350px;">Beaf</a>
-            <a class="st4" href="javascript:void(0)" rel="0,-350,0,88" style="left: 0px; top: -350px;">我喜欢</a>
-            <a class="st5" href="javascript:void(0)" rel="1010,116,554,116" style="left: 1010px; top: 116px;">年龄</a>
-            <a class="st6" href="javascript:void(0)" rel="1010,146,554,146" style="left: 1010px; top: 146px;">身高</a>
-            <a class="st7" href="javascript:void(0)" rel="1010,163,554,163" style="left: 1010px; top: 163px;">敲代码之前的我</a>
-            <a class="st8" href="javascript:void(0)" rel="1010,236,554,236" style="left: 1010px; top: 236px;">性格</a>
-            <a class="st9" href="javascript:void(0)" rel="-710,346,290,346" style="left: -710px; top: 346px;">年龄</a>
-            <a class="st10" href="javascript:void(0)" rel="-710,376,290,376" style="left: -710px; top: 376px;">身高</a>
-            <a class="st11" href="javascript:void(0)" rel="-710,406,224,406" style="left: -710px; top: 406px;">性格</a>
-            <a class="st12" href="javascript:void(0)" rel="-710,433,30,433" style="left: -710px; top: 433px;">敲代码之后的我</a>
-            <!--<a class="st13" href="javascript:void(0)" rel="761,1050,761,506" style="left: 761px; top: 1050px;">上帝粒子</a>-->
-            <!--<a class="st14" href="javascript:void(0)" rel="761,1050,761,523" style="left: 761px; top: 1050px;">比特币</a>-->
-            <a class="st15" href="javascript:void(0)" rel="761,1050,761,587" style="left: 761px; top: 1050px;">开心就好</a>
-            <!--<a class="st16" href="javascript:void(0)" rel="761,1050,761,622" style="left: 761px; top: 1050px;">玉兔号</a>-->
-            <!--<a class="st17" href="javascript:void(0)" rel="761,1050,761,656" style="left: 761px; top: 1050px;">4G</a>-->
-            <a class="stimg1" href="javascript:void(0)" rel="0,-350,0,153" style="left: 0px; top: -350px;"><img width="181" height="166" src="images/ice.jpg" ></a>
-            <a class="stimg2" href="javascript:void(0)" rel="980,2,220,2" style="left: 980px; top: 2px;"><img width="313" height="317" src="images/me.jpg"></a>
-            <a class="stimg3" href="javascript:void(0)" rel="-407,350,413,350" style="left: -407px; top: 350px;"><img width="215" height="215" src="images/me2.jpg"></a>
-            <a class="stimg4" href="javascript:void(0)" rel="761,850,761,350" style="left: 761px; top: 850px;"><img width="140" height="200" src="images/kx.jpg"></a>
+    <div class="section table" data-anchor="page2"
+         style="height: 134px; background-image: url(images/aboutme.jpg);background-size: contain;background-position: bottom center;background-repeat: no-repeat">
+        <div class="tableCell" style="height:134px;">
+            <div class="science-inner inner">
+                <a class="st1" href="javascript:void(0)" rel="0,-350,0,7" style="left: 0px; top: -350px;">榴莲冰淇淋</a>
+                <a class="st2" href="javascript:void(0)" rel="0,-350,0,37" style="left: 0px; top: -350px;">咖喱火锅</a>
+                <a class="st3" href="javascript:void(0)" rel="0,-350,0,68" style="left: 0px; top: -350px;">Beaf</a>
+                <a class="st4" href="javascript:void(0)" rel="0,-350,0,88" style="left: 0px; top: -350px;">我喜欢</a>
+                <a class="st5" href="javascript:void(0)" rel="1010,116,554,116" style="left: 1010px; top: 116px;">年龄</a>
+                <a class="st6" href="javascript:void(0)" rel="1010,146,554,146" style="left: 1010px; top: 146px;">身高</a>
+                <a class="st7" href="javascript:void(0)" rel="1010,163,554,163" style="left: 1010px; top: 163px;">敲代码之前的我</a>
+                <a class="st8" href="javascript:void(0)" rel="1010,236,554,236" style="left: 1010px; top: 236px;">性格</a>
+                <a class="st9" href="javascript:void(0)" rel="-710,346,290,346" style="left: -710px; top: 346px;">年龄</a>
+                <a class="st10" href="javascript:void(0)" rel="-710,376,290,376"
+                   style="left: -710px; top: 376px;">身高</a>
+                <a class="st11" href="javascript:void(0)" rel="-710,406,224,406"
+                   style="left: -710px; top: 406px;">性格</a>
+                <a class="st12" href="javascript:void(0)" rel="-710,433,30,433" style="left: -710px; top: 433px;">敲代码之后的我</a>
+                <!--<a class="st13" href="javascript:void(0)" rel="761,1050,761,506" style="left: 761px; top: 1050px;">上帝粒子</a>-->
+                <!--<a class="st14" href="javascript:void(0)" rel="761,1050,761,523" style="left: 761px; top: 1050px;">比特币</a>-->
+                <a class="st15" href="javascript:void(0)" rel="761,1050,761,587"
+                   style="left: 761px; top: 1050px;">开心就好</a>
+                <!--<a class="st16" href="javascript:void(0)" rel="761,1050,761,622" style="left: 761px; top: 1050px;">玉兔号</a>-->
+                <!--<a class="st17" href="javascript:void(0)" rel="761,1050,761,656" style="left: 761px; top: 1050px;">4G</a>-->
+                <a class="stimg1" href="javascript:void(0)" rel="0,-350,0,153" style="left: 0px; top: -350px;"><img
+                        width="181" height="166" src="images/ice.jpg"></a>
+                <a class="stimg2" href="javascript:void(0)" rel="980,2,220,2" style="left: 980px; top: 2px;"><img
+                        width="313" height="317" src="images/me.jpg"></a>
+                <a class="stimg3" href="javascript:void(0)" rel="-407,350,413,350"
+                   style="left: -407px; top: 350px;"><img width="215" height="215" src="images/me2.jpg"></a>
+                <a class="stimg4" href="javascript:void(0)" rel="761,850,761,350" style="left: 761px; top: 850px;"><img
+                        width="140" height="200" src="images/kx.jpg"></a>
+            </div>
         </div>
-    </div></div>
+    </div>
 
-    <div class="section table" data-anchor="page3" style="height: 134px; background-color: rgb(253, 246, 225);"><div class="tableCell" style="height:134px;">
-        <div class="famous-inner inner">
-            <!--<a class="fa1" href="javascript:void(0)" rel="90,-180,90,68" style="left: 90px; top: -180px;">龚爱爱</a>-->
-            <a class="fa2" href="javascript:void(0)" rel="90,-180,90,93" style="left: 90px; top: -180px;">H5</a>
-            <!--<a class="fa3" href="javascript:void(0)" rel="0,-180,0,113" style="left: 0px; top: -180px;">彭丽媛</a>-->
-            <!--<a class="fa4" href="javascript:void(0)" rel="1280,203,235,203" style="left: 1280px; top: 203px;">撒切尔夫人</a>-->
-            <a class="fa5" href="javascript:void(0)" rel="1280,227,235,227" style="left: 1280px; top: 227px;">JS</a>
-            <!--<a class="fa6" href="javascript:void(0)" rel="1080,290,235,290" style="left: 1080px; top: 290px;">雷政富</a>-->
-            <a class="fa7" href="javascript:void(0)" rel="-300,317,100,317," style="left: -300px; top: 317px;">CSS</a>
-            <!--<a class="fa8" href="javascript:void(0)" rel="-300,533,149,533" style="left: -300px; top: 533px;">陈永洲</a>-->
-            <!--<a class="fa9" href="javascript:void(0)" rel="-300,563,149,563" style="left: -300px; top: 563px;">埃隆·马斯克</a>-->
-            <!--<a class="fa10" href="javascript:void(0)" rel="-300,593,149,593" style="left: -300px; top: 593px;">曼德拉</a>-->
-            <a class="fa11" href="javascript:void(0)" rel="1370,383,786,383" style="left: 1370px; top: 383px;">jQuery</a>
-            <a class="fa12" href="javascript:void(0)" rel="1370,450,786,450" style="left: 1370px; top: 450px;">PHP</a>
-            <a class="fa13" href="javascript:void(0)" rel="1370,480,786,480" style="left: 1370px; top: 480px;">MySQL</a>
-            <!--<a class="fa14" href="javascript:void(0)" rel="1370,510,786,510" style="left: 1370px; top: 510px;">夏俊峰</a>-->
-            <!--<a class="faiteml fa15" href="javascript:void(0)" rel="1370,540,786,540" style="left: 1370px; top: 540px;">万爱花</a>-->
-            <a class="faimg1" href="javascript:void(0)" rel="200,-180,200,10" style="left: 200px; top: -180px;"><img width="200" height="200" src="images/h5.png"></a>
-            <a class="faimg2" href="javascript:void(0)" rel="980,77,600,77" style="left: 980px; top: 77px;"><img width="200" height="200" src="images/js.png"></a>
-            <a class="faimg3" href="javascript:void(0)" rel="980,366,290,366" style="left: 980px; top: 366px;"><img width="200" height="200" src="images/ajax.png"></a>
-            <a class="faimg4" href="javascript:void(0)" rel="-300,387,149,387" style="left: -300px; top: 387px;"><img width="200" height="200" src="images/css3.png"></a>
+    <div class="section table" data-anchor="page3" style="height: 134px; background-color: rgb(253, 246, 225);">
+        <div class="tableCell" style="height:134px;">
+            <div class="famous-inner inner">
+                <!--<a class="fa1" href="javascript:void(0)" rel="90,-180,90,68" style="left: 90px; top: -180px;">龚爱爱</a>-->
+                <a class="fa2" href="javascript:void(0)" rel="90,-180,90,93" style="left: 90px; top: -180px;">H5</a>
+                <!--<a class="fa3" href="javascript:void(0)" rel="0,-180,0,113" style="left: 0px; top: -180px;">彭丽媛</a>-->
+                <!--<a class="fa4" href="javascript:void(0)" rel="1280,203,235,203" style="left: 1280px; top: 203px;">撒切尔夫人</a>-->
+                <a class="fa5" href="javascript:void(0)" rel="1280,227,235,227" style="left: 1280px; top: 227px;">JS</a>
+                <!--<a class="fa6" href="javascript:void(0)" rel="1080,290,235,290" style="left: 1080px; top: 290px;">雷政富</a>-->
+                <a class="fa7" href="javascript:void(0)" rel="-300,317,100,317,"
+                   style="left: -300px; top: 317px;">CSS</a>
+                <!--<a class="fa8" href="javascript:void(0)" rel="-300,533,149,533" style="left: -300px; top: 533px;">陈永洲</a>-->
+                <!--<a class="fa9" href="javascript:void(0)" rel="-300,563,149,563" style="left: -300px; top: 563px;">埃隆·马斯克</a>-->
+                <!--<a class="fa10" href="javascript:void(0)" rel="-300,593,149,593" style="left: -300px; top: 593px;">曼德拉</a>-->
+                <a class="fa11" href="javascript:void(0)" rel="1370,383,786,383" style="left: 1370px; top: 383px;">jQuery</a>
+                <a class="fa12" href="javascript:void(0)" rel="1370,450,786,450"
+                   style="left: 1370px; top: 450px;">PHP</a>
+                <a class="fa13" href="javascript:void(0)" rel="1370,480,786,480"
+                   style="left: 1370px; top: 480px;">MySQL</a>
+                <!--<a class="fa14" href="javascript:void(0)" rel="1370,510,786,510" style="left: 1370px; top: 510px;">夏俊峰</a>-->
+                <!--<a class="faiteml fa15" href="javascript:void(0)" rel="1370,540,786,540" style="left: 1370px; top: 540px;">万爱花</a>-->
+                <a class="faimg1" href="javascript:void(0)" rel="200,-180,200,10" style="left: 200px; top: -180px;">
+                    <img width="200" height="200" src="images/h5.png">
+                </a>
+                <a class="faimg2" href="javascript:void(0)" rel="980,77,600,77" style="left: 980px; top: 77px;">
+                    <img width="200" height="200" src="images/js.png">
+                </a>
+                <a class="faimg3" href="javascript:void(0)" rel="700,366,290,366" style="left:700px; top: 366px;width:500px;height:400px">
+                    <!--<img width="200" height="200" src="images/ajax.png">-->
+                    <div class="box" style="position: absolute;width: 700px;height:400px;left:-300px;top:-100px"></div>
+                </a>
+                <a class="faimg4" href="javascript:void(0)" rel="-300,387,149,387"
+                   style="left: -300px; top: 387px;">
+                    <img width="200" height="200" src="images/css3.png">
+                </a>
+            </div>
         </div>
-    </div></div>
-    <div class="section table" data-anchor="page4" style="height: 134px; background-color: rgb(233, 233, 233);"><div class="tableCell" style="height:134px;">
-        <div class="social-inner inner">
-            <a class="so1" href="fanke/index.html" rel="450,-175,450,51" style="left: 450px; top: -175px;">凡客</a>
-            <a class="so2" href="xiaomi/index.html" rel="450,-175,450,110" style="left: 450px; top: -175px;">小米</a>
-            <a class="so3" href="jindong/index.html" rel="450,-175,450,140" style="left: 450px; top: -175px;">京东</a>
-            <a class="so4" href="maixiang/index.html" rel="980,228,450,228" style="left: 980px; top: 228px;">麦香甜品</a>
-            <a class="so5" href="apple/index.html" rel="980,258,450,258" style="left: 980px; top: 258px;">苹果</a>
-            <a class="so6" href="shafa/index.html" rel="980,288,450,288" style="left: 980px; top: 288px;">沙发网</a>
-            <!--<a class="so7" href="javascript:void(0)" rel="980,340,450,340" style="left: 980px; top: 340px;">沙发网</a>-->
-            <a class="so8" href="yintai/index.html" rel="980,363,450,363" style="left: 980px; top: 363px;">银泰网</a>
-            <a class="so9" href="mobiletianmao/index.html" rel="980,428,450,428" style="left: 980px; top: 428px;">移动端天猫</a>
-            <a class="so10" href="uek/index.html" rel="-405,369,162,369" style="left: -405px; top: 369px;">优逸客</a>
-            <!--<a class="so11" href="javascript:void(0)" rel="-405,434,162,434" style="left: -405px; top: 434px;">字母游戏</a>-->
-            <!--<a class="so12" href="javascript:void(0)" rel="-405,464,162,464" style="left: -405px; top: 464px;">字母游戏</a>-->
-            <a class="so13" href="mobile/index.html" rel="15,850,15,520" style="left: 15px; top: 850px;">移动网</a>
-            <a class="so14" href="tianmao/index.html" rel="376,1050,376,585" style="left: 376px; top: 1050px;">天猫</a>
-            <a class="so15" href="dazigame/typegame.html" rel="376,1050,357,612" style="left: 376px; top: 1050px;">字母游戏</a>
-            <a class="soimg1" href="javascript:void(0)" rel="156,-175,156,10" style="left: 156px; top: -175px;"><img width="270" height="160" src="images/fk.png"></a>
-            <a class="soimg2" href="javascript:void(0)" rel="-405,186,155,186" style="left: -405px; top: 186px;"><img width="270" height="165" src="images/apple.png"></a>
-            <a class="soimg3" href="javascript:void(0)" rel="980,186,675,186" style="left: 980px; top: 186px;"><img width="277" height="166" src="images/sf.png"></a>
-            <a class="soimg4" href="javascript:void(0)" rel="507,850,507,494" style="left: 507px; top: 850px;"><img width="203" height="169" src="images/tm.png"></a>
+    </div>
+    <div class="section table" data-anchor="page4" style="height: 134px; background-color: rgb(233, 233, 233);">
+        <div class="tableCell" style="height:134px;">
+            <div class="social-inner inner">
+                <a class="so1" href="fanke/index.html" rel="450,-175,450,51" style="left: 450px; top: -175px;">凡客</a>
+                <a class="so2" href="xiaomi/index.html" rel="450,-175,450,110" style="left: 450px; top: -175px;">小米</a>
+                <a class="so3" href="jindong/index.html" rel="450,-175,450,140" style="left: 450px; top: -175px;">京东</a>
+                <a class="so4" href="maixiang/index.html" rel="980,228,450,228"
+                   style="left: 980px; top: 228px;">麦香甜品</a>
+                <a class="so5" href="apple/index.html" rel="980,258,450,258" style="left: 980px; top: 258px;">苹果</a>
+                <a class="so6" href="shafa/index.html" rel="980,288,450,288" style="left: 980px; top: 288px;">沙发网</a>
+                <!--<a class="so7" href="javascript:void(0)" rel="980,340,450,340" style="left: 980px; top: 340px;">沙发网</a>-->
+                <a class="so8" href="yintai/index.html" rel="980,363,450,363" style="left: 980px; top: 363px;">银泰网</a>
+                <a class="so9" href="mobiletianmao/index.html" rel="980,428,450,428" style="left: 980px; top: 428px;">移动端天猫</a>
+                <a class="so10" href="uek/index.html" rel="-405,369,162,369" style="left: -405px; top: 369px;">优逸客</a>
+                <!--<a class="so11" href="javascript:void(0)" rel="-405,434,162,434" style="left: -405px; top: 434px;">字母游戏</a>-->
+                <!--<a class="so12" href="javascript:void(0)" rel="-405,464,162,464" style="left: -405px; top: 464px;">字母游戏</a>-->
+                <a class="so13" href="mobile/index.html" rel="15,850,15,520" style="left: 15px; top: 850px;">移动网</a>
+                <a class="so14" href="tianmao/index.html" rel="376,1050,376,585"
+                   style="left: 376px; top: 1050px;">天猫</a>
+                <a class="so15" href="dazigame/typegame.html" rel="376,1050,357,612" style="left: 376px; top: 1050px;">字母游戏</a>
+                <a class="soimg1" href="javascript:void(0)" rel="156,-175,156,10" style="left: 156px; top: -175px;"><img
+                        width="270" height="160" src="images/fk.png"></a>
+                <a class="soimg2" href="javascript:void(0)" rel="-405,186,155,186"
+                   style="left: -405px; top: 186px;"><img width="270" height="165" src="images/apple.png"></a>
+                <a class="soimg3" href="javascript:void(0)" rel="980,186,675,186" style="left: 980px; top: 186px;"><img
+                        width="277" height="166" src="images/sf.png"></a>
+                <a class="soimg4" href="javascript:void(0)" rel="507,850,507,494" style="left: 507px; top: 850px;"><img
+                        width="203" height="169" src="images/tm.png"></a>
+            </div>
         </div>
-    </div></div>
+    </div>
 
-    <div class="section table" data-anchor="page5" style="height: 134px; background-color: rgb(243, 243, 243);"><div class="tableCell" style="height:134px;">
-        <div class="net-inner inner">
-            <a class="net1" href="javascript:void(0)" rel="19,-240,19,56" style="left: 19px; top: -240px;">打工经历</a>
-            <a class="net2" href="javascript:void(0)" rel="0,-240,086" style="left: 0px; top: -240px;">正枫英语</a>
-            <a class="net3" href="javascript:void(0)" rel="0,-240,116" style="left: 0px; top: -240px;">市场专员</a>
-            <!--<a class="net4" href="javascript:void(0)" rel="19,-240,19,146" style="left: 19px; top: -240px;">陈欧体</a>-->
-            <!--<a class="net5" href="javascript:void(0)" rel="-54,-240,-54,176" style="left: -54px; top: -240px;">为什么放弃治疗</a>-->
-            <!--<a class="net6" href="javascript:void(0)" rel="-32,-240,-32,206" style="left: -32px; top: -240px;">大概8点20发</a>-->
-            <!--<a class="net7" href="javascript:void(0)" rel="980,-1,449,-1" style="left: 980px; top: -1px;">绿茶婊</a>-->
-            <a class="net8" href="javascript:void(0)" rel="980,28,449,28" style="left: 980px; top: 28px;">新华书店</a>
-            <a class="net9" href="javascript:void(0)" rel="980,50,449,50" style="left: 980px; top: 50px;">市场专员</a>
-            <!--<a class="net10" href="javascript:void(0)" rel="980,116,449,116" style="left: 980px; top: 116px;">女汉子</a>-->
-            <!--<a class="net11" a="" href="javascript:void(0)" rel="980,146,449,146" style="left: 980px; top: 146px;">注定孤独一生</a>-->
-            <!--<a class="net12" a="" href="javascript:void(0)" rel="980,184,449,184" style="left: 980px; top: 184px;">我和小伙伴们都惊呆了</a>-->
-            <a class="net13" a="" href="javascript:void(0)" rel="-435,261,265,261" style="left: -435px; top: 261px;">正枫英语市场专员</a>
-            <!--<a class="net14" a="" href="javascript:void(0)" rel="-435,291,103,291" style="left: -435px; top: 291px;">待我长发及腰</a>-->
-            <!--<a class="net15" a="" href="javascript:void(0)" rel="-435,351,8,351" style="left: -435px; top: 351px;">土豪我们做朋友吧</a>-->
-            <a class="net16" a="" href="javascript:void(0)" rel="-435,428,63,428" style="left: -435px; top: 428px;">蒙娜丽莎瓷砖</a>
-            <a class="net17" a="" href="javascript:void(0)" rel="-435,458,63,458" style="left: -435px; top: 458px;">宣传员</a>
-            <a class="net18" a="" href="javascript:void(0)" style="left: 449px; top: 1140px;" rel="449,1140,449,578">兴辉陶瓷</a>
-            <a class="net19" a="" href="javascript:void(0)" style="left: 449px; top: 1140px;" rel="449,1140,449,608">礼仪</a>
-            <!--<a class=" net20" a="" href="javascript:void(0)" style="left: 449px; top: 1140px;" rel="449,1140,449,638">因霾劝菜</a>-->
-            <a class="netimg1" a="" href="javascript:void(0)" rel="139,-240,139,57" style="left: 139px; top: -240px;"><img width="130" height="200" src="images/work1.jpg"></a>
-            <a class="netimg2" a="" href="javascript:void(0)" rel="980,96,809,96" style="left: 980px; top: 96px;"><img width="100" height="100" src="images/work2.jpg"></a>
-            <a class="netimg3" a="" href="javascript:void(0)" rel="-435,431,179,431" style="left: -435px; top: 431px;"><img width="150" height="180" src="images/work5.jpg"></a>
-            <a class="netimg4" a="" href="javascript:void(0)" rel="451,850,451,267" style="left: 451px; top: 850px;"><img width="250" height="291" src="images/work3.jpg"></a>
+    <div class="section table" data-anchor="page5" style="height: 134px; background-color: rgb(243, 243, 243);">
+        <div class="tableCell" style="height:134px;">
+            <div class="net-inner inner">
+                <a class="net1" href="javascript:void(0)" rel="19,-240,19,56" style="left: 19px; top: -240px;">打工经历</a>
+                <a class="net2" href="javascript:void(0)" rel="0,-240,086" style="left: 0px; top: -240px;">正枫英语</a>
+                <a class="net3" href="javascript:void(0)" rel="0,-240,116" style="left: 0px; top: -240px;">市场专员</a>
+                <!--<a class="net4" href="javascript:void(0)" rel="19,-240,19,146" style="left: 19px; top: -240px;">陈欧体</a>-->
+                <!--<a class="net5" href="javascript:void(0)" rel="-54,-240,-54,176" style="left: -54px; top: -240px;">为什么放弃治疗</a>-->
+                <!--<a class="net6" href="javascript:void(0)" rel="-32,-240,-32,206" style="left: -32px; top: -240px;">大概8点20发</a>-->
+                <!--<a class="net7" href="javascript:void(0)" rel="980,-1,449,-1" style="left: 980px; top: -1px;">绿茶婊</a>-->
+                <a class="net8" href="javascript:void(0)" rel="980,28,449,28" style="left: 980px; top: 28px;">新华书店</a>
+                <a class="net9" href="javascript:void(0)" rel="980,50,449,50" style="left: 980px; top: 50px;">市场专员</a>
+                <!--<a class="net10" href="javascript:void(0)" rel="980,116,449,116" style="left: 980px; top: 116px;">女汉子</a>-->
+                <!--<a class="net11" a="" href="javascript:void(0)" rel="980,146,449,146" style="left: 980px; top: 146px;">注定孤独一生</a>-->
+                <!--<a class="net12" a="" href="javascript:void(0)" rel="980,184,449,184" style="left: 980px; top: 184px;">我和小伙伴们都惊呆了</a>-->
+                <a class="net13" a="" href="javascript:void(0)" rel="-435,261,265,261"
+                   style="left: -435px; top: 261px;">正枫英语市场专员</a>
+                <!--<a class="net14" a="" href="javascript:void(0)" rel="-435,291,103,291" style="left: -435px; top: 291px;">待我长发及腰</a>-->
+                <!--<a class="net15" a="" href="javascript:void(0)" rel="-435,351,8,351" style="left: -435px; top: 351px;">土豪我们做朋友吧</a>-->
+                <a class="net16" a="" href="javascript:void(0)" rel="-435,428,63,428" style="left: -435px; top: 428px;">蒙娜丽莎瓷砖</a>
+                <a class="net17" a="" href="javascript:void(0)" rel="-435,458,63,458" style="left: -435px; top: 458px;">宣传员</a>
+                <a class="net18" a="" href="javascript:void(0)" style="left: 449px; top: 1140px;"
+                   rel="449,1140,449,578">兴辉陶瓷</a>
+                <a class="net19" a="" href="javascript:void(0)" style="left: 449px; top: 1140px;"
+                   rel="449,1140,449,608">礼仪</a>
+                <!--<a class=" net20" a="" href="javascript:void(0)" style="left: 449px; top: 1140px;" rel="449,1140,449,638">因霾劝菜</a>-->
+                <a class="netimg1" a="" href="javascript:void(0)" rel="139,-240,139,57"
+                   style="left: 139px; top: -240px;"><img width="130" height="200" src="images/work1.jpg"></a>
+                <a class="netimg2" a="" href="javascript:void(0)" rel="980,96,809,96"
+                   style="left: 980px; top: 96px;"><img width="100" height="100" src="images/work2.jpg"></a>
+                <a class="netimg3" a="" href="javascript:void(0)" rel="-435,431,179,431"
+                   style="left: -435px; top: 431px;"><img width="150" height="180" src="images/work5.jpg"></a>
+                <a class="netimg4" a="" href="javascript:void(0)" rel="451,850,451,267"
+                   style="left: 451px; top: 850px;"><img width="250" height="291" src="images/work3.jpg"></a>
+            </div>
         </div>
-    </div></div>
+    </div>
 
-    <div class="section table" data-anchor="page6" style="height: 134px; background-image:url(images/contact.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom">
+    <div class="section table" data-anchor="page6"
+         style="height: 134px; background-image:url(images/contact.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom">
         <!--<div style="display: block;margin: 0 auto">邮箱地址:907491279@qq.com</div>-->
-        <div style="position:absolute;top:200px;left:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'" class="lianxi">QQ:907491279<br>微信:柚子好像酸<br>邮箱地址:907491279@qq.com<br></div>
-        <div style="position:absolute;top:400px;right:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'" class="pingjia">
+        <div style="position:absolute;top:200px;left:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"
+             class="lianxi">QQ:907491279<br>微信:柚子好像酸<br>邮箱地址:907491279@qq.com<br></div>
+        <div style="position:absolute;top:400px;right:-300px;width:300px;height:200px;background:transparent;font-size: 18px;text-align: center;color:#fbac69;font-family: '幼圆'"
+             class='pingjia'>
             有责任，工作踏实，性格开朗乐观，积极上进。
-        <br>
+            <br>
             易和人相处，拥有良好的亲和力。
             <br>
             具有很强的自学能力和良好的学习方法，喜欢研究各种新的框架。
             <br></div>
     </div>
-</div></body>
+</div>
+</body>
 </html>
