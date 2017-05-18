@@ -211,7 +211,7 @@ function cjlunbo(pic,bigbannerBox,lis,huadongzuo,huadongyou,tuactiveZ,liactivebg
         const li = $(cdhys);
         const section = $(neirong);
         const li_hd = $(cnavHead)[0];
-        const dingbu = $(head);
+        const dingbu = $(head)[0];
         const ch = document.documentElement.clientHeight;
         let obj = scrollobj();//获取当前浏览器
         for (let i = 0; i < li.length; i++) {
