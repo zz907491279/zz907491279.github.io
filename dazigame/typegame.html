@@ -330,7 +330,7 @@
     var scor = document.querySelector(".scor");
     var state=document.querySelector(".state");
     var lifes = document.querySelectorAll(".lifez img");
-    console.log(lifes);
+//    console.log(lifes);
     var zt = document.querySelector(".pause");
     var startbtn=document.querySelector(".ks");
     var zm=document.querySelector(".bt");
@@ -420,6 +420,10 @@
 
 //            创建字母
         start() {
+            for(let i=0;i<5;i++){
+                console.log(i)
+                document.querySelectorAll(".lifez img")[i].style.display="block";
+            }
             this.flag=false;
             for (var i = 0; i < this.num; i++) {
                 this._createLetter();

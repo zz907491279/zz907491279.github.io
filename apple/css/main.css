@@ -255,6 +255,13 @@ nav>.neikuan>ul>li.iconfont{
     line-height: 1.45455;
     font-weight: 400;
 }
+.footnav1 ul li a{
+	display: block;
+	color: #333;
+}
+.footnav1 ul li a:hover{
+	text-decoration: underline;
+}
 .footnav{
 	font-size: 11px;
     line-height: 1.27273;
@@ -333,6 +340,9 @@ h3{
 	font-size: 11px;
 	color: #0070c9;
 	float: left;
+}
+.footshop span a:hover{
+	text-decoration: underline;
 }
 .foot-legal{
 	position: relative;
