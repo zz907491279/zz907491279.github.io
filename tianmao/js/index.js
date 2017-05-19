@@ -114,7 +114,7 @@ $(function(){
 	const head=$("header")[0];
 	const youdhl=$(".youce")[0];
 	let obj=scrollobj();
-	window.onscroll=function(){
+	document.onscroll=function(){
 		if(obj.scrollTop==0){
 			let youding=$(".youce-3-8")[0];
 			youding.style.display="none";
