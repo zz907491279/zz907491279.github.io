@@ -71,6 +71,7 @@ nav>.neikuan>ul>li.iconfont{
 	height: 594px;
 	background: #f2f2f2;
 	position: relative;
+	overflow: hidden;
 }
 /*.left{
     position: absolute;
