@@ -21,7 +21,7 @@
 
 	//xuanxiangka(btn,con)选项卡  btn选项卡的按钮 con选项卡的内容
 	function xuanxiangka(btn,con){
-		// for 循环中把let换为var的写法 btn[i].ind=i;保证btn中的i与con中的i一致 
+		// for 循环中把let换为var的写法 btn[i].ind=i;保证btn中的i与con中的i一致
 		for(var i=0;i<btn.length;i++){
 			btn[i].ind=i;
 			btn[i].onmouseover=function(){	
@@ -491,27 +491,17 @@ function gundong(cedaohang,cdhys,neirong,topnav){
 				ul[i].style.height=0;
 			}
 			for(let i=0;i<item.length;i++){
-				// item[i].onmouseover=function(){
-				// 	let ul=item[i].children[1];
-				// 	if(item[i].children[1]){
-				// 		animate(ul,{height:ul.getAttribute("h")},500);
-				// 	}
-				// }
-				// item[i].onmouseout=function(){
-				// 	let ul=item[i].children[1];
-				// 	if(item[i].children[1]){
-				// 		animate(ul,{height:0},500);
-				// 	}
-				// }
 				hover(item[i],function(){
 					let ul=item[i].children[2];
 					if(item[i].children[1]){
 						animate(ul,{height:ul.getAttribute("h")},500);
+						ul.style.opacity=1;
 					}
 				},function(){
 					let ul=item[i].children[2];
 					if(item[i].children[1]){
 						animate(ul,{height:0},500);
+                        ul.style.opacity=0;
 					}
 				});
 			}

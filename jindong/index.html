@@ -7075,4 +7075,67 @@
 	
 	
 </body>
+<script>
+    const dh=$(".dh")[0];
+    const dm=$(".dm")[0];
+    const ds=$(".ds")[0];
+    class djs{
+        constructor(h,m,s,date){
+            this.h=h;
+            this.m=m;
+            this.s=s;
+            // this.t=t;
+            this.date=date;
+        }
+        play(){
+            let map=this.gettime();
+            this.writes(map);
+            this.update();
+        }
+        gettime(){
+            let now= new Date();
+            let chatime=Math.abs(this.date.getTime()-now.getTime());
+            chatime/=1000;
+            // let t=parseInt(chatime/60/60/24);
+            let h=parseInt(chatime/60/60%24);
+            let m=parseInt(chatime/60%60);
+            let s=parseInt(chatime%60);
+            let map =new Map();
+
+            h=h<10?(h):h;
+            m=m<10?(m):m;
+            s=s<10?(s):s;
+
+            map.set("h",h);
+            map.set("m",m);
+            map.set("s",s);
+            return map;
+        }
+        writes(map){
+            this.h.innerHTML=map.get("h");
+            if(map.get("m")<10){
+                this.s.innerHTML="0"+map.get("m");
+            }else{
+                this.s.innerHTML=map.get("m");
+            }
+            console.log(map.get("s"));
+            if(map.get("s")<10){
+                this.s.innerHTML="0"+map.get("s");
+			}else{
+                this.s.innerHTML=map.get("s");
+			}
+
+
+        }
+        update(){
+            let that=this;
+            setInterval(function(){
+                that.writes(that.gettime());
+            },1000)
+        }
+    }
+    let wuyi=new Date(2017,4,1,0,0,0)
+    let wydjs1=new djs(dh,dm,ds,wuyi);
+    wydjs1.play();
+</script>
 </html>

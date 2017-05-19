@@ -331,6 +331,7 @@ color: #b81c22;
     left: -2px;
     top: 30px;
     overflow: hidden;
+	opacity: 0;
 }
 .hdnav span{
 	display: block;
